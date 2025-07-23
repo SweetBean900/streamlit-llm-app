@@ -5,11 +5,10 @@ load_dotenv()
 
 import streamlit as st
 from openai import OpenAI
-import os
 
-
-# OpenAIクライアント初期化
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+# OpenAI APIクライアントの初期化
+# OpenAIのAPIキーを環境変数から取得
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 st.title("専門家に質問しよう！")
 
