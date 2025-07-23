@@ -49,3 +49,4 @@ if st.button("送信"):
         answer = response.choices[0].message.content
         st.success("AIからの回答:")
         st.write(answer)
+st.write("APIキー（先頭4文字）: ", st.secrets.get("OPENAI_API_KEY", "")[:4])
